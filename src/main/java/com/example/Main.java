@@ -37,7 +37,7 @@ import java.util.Map;
 
 @Controller
 @SpringBootApplication
-@ComponentScan(basePackages = "com.adobe.controller")
+@ComponentScan(basePackages = "com.adobe")
 public class Main {
 
   @Value("${spring.datasource.url}")
