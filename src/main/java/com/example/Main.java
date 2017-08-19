@@ -55,7 +55,7 @@ public class Main {
     return "index";
   }
 
-/*  @RequestMapping("/db")
+  @RequestMapping("/db")
   String db(Map<String, Object> model) {
     try (Connection connection = dataSource.getConnection()) {
       Statement stmt = connection.createStatement();
@@ -85,6 +85,6 @@ public class Main {
       config.setJdbcUrl(dbUrl);
       return new HikariDataSource(config);
     }
-  }*/
+  }
 
 }
