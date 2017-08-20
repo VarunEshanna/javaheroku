@@ -20,7 +20,7 @@ public class IntentController {
 	IntentService intentService;
 	
 	@RequestMapping(value = "/getLuisData", method = RequestMethod.POST, consumes=MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-	public ResponseData getLuisData(@RequestBody ResponseData responseData){
+	public ResponseData getLuisData(ResponseData responseData){
 		if(responseData.getLuisCallRequired()){
 			responseData = intentService.getLUISData(responseData);
 			
