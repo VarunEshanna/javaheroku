@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,7 +19,7 @@ public class IntentController {
 	@Autowired
 	IntentService intentService;
 	
-	@RequestMapping(value = "/getLuisData", method = RequestMethod.POST)
+	@RequestMapping(value = "/getLuisData", method = RequestMethod.POST, consumes=MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ResponseData getLuisData(@RequestBody ResponseData responseData){
 		if(responseData.getLuisCallRequired()){
 			responseData = intentService.getLUISData(responseData);
