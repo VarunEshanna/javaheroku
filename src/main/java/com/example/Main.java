@@ -56,7 +56,7 @@ public class Main {
   }
 
   @RequestMapping("/voice")
-  String index() {
+  String voice() {
     return "voice";
   }
 
