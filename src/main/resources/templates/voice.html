@@ -75,7 +75,8 @@
 				            success: function (data) {
 				                alert("Data: " + data + "\nStatus: " + status);
 				            },
-				            data: JSON.stringify(data1)
+				            data: JSON.stringify(data1),
+				            headers:{contentType: "application/json"}
 				        });
 					};
 
