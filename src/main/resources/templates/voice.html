@@ -55,13 +55,18 @@
 						}
 						r.innerHTML = finalTranscripts + '<span style="color:#999">' + interimTranscripts + '</span>';
 					};
+					
 					speechRecognizer.onerror = function (event) {
+					};
+
+					speechRecognizer.onend = function (event) {
+						console.log('data: '+ finalTranscripts);
 					};
 				}else{
 					r.innerHTML = 'Your browser is not supported. If google chrome, please upgrade!';
 				}
 			}
-			console.log(r.innerHTML);
+			
 			
 
 		</script>
