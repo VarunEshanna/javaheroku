@@ -19,7 +19,7 @@ public class IntentController {
 	@Autowired
 	IntentService intentService;
 	
-	@RequestMapping(value = "/getLuisData", method = RequestMethod.POST, consumes=MediaType.APPLICATION_JSON_UTF8_VALUE)
+	@RequestMapping(value = "/getLuisData", method = RequestMethod.POST, consumes=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseData getLuisData(@RequestBody ResponseData responseData){
 		if(responseData.getLuisCallRequired()){
 			responseData = intentService.getLUISData(responseData);
